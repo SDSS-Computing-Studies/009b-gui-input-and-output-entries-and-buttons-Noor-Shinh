@@ -9,52 +9,52 @@ you might use in your assignment
 import tkinter as tk 
 from tkinter import *
 win=tk.Tk()
-
+eoutput=StringVar()
 
 
 def madlib():
-    Holiday=a1.get
-    Noun=a2.get
-    Place=a3.get
-    Person=a4.get
-    Adjective=a5.get
-    Body=a6.get
-    Verb=a7.get
-    Adjective2=a8.get
-    Adjective3=a9.get
-    Food=a10.get
-    Plural=a11.get
-    story ="I cant believe its already"+ Holiday + "!I can't wait to put on my"+Noun+"and visit every"+Place+"in my neighbourhood.This year I am going to dress up as"+ Person+" with" + Adjective+Body+". Before I "+ Verb+"I make sure to grab my"+Adjective+Noun+"to hold all of my"+Food+"Finally all of my"+Plural+"are ready to go"
+    Holiday=a1.get()
+    Noun=a2.get()
+    Place=a3.get()
+    Person=a4.get()
+    Adjective=a5.get()
+    Body=a6.get()
+    Verb=a7.get()
+    Adjective2=a8.get()
+    Adjective3=a9.get()
+    Food=a10.get()
+    Plural=a11.get()
+    
+    story ="I cant believe its already"+ Holiday + "!I can't wait to put on my"+Noun+"and visit every"+Place+"in my neighbourhood.This year I am going to dress up as"+ Person+" with" + Adjective2+Body+". Before I "+ Verb+"I make sure to grab my"+Adjective3+Noun+"to hold all of my"+Food+"Finally all of my"+Plural+"are ready to go"
+    eoutput.set(story)
+    f1entry.delete(0,END)
+    f1entry.insert(0,story)
 
-output1=("Enter a Holiday")
-output2=("Enter a Noun")
-output3=("Enter an Place")
-output4=("Enter a Person") 
-output5=("Enter a Adjective")
-output6=("Enter a Body Part")
-output7=("Enter a Verb")
-output8=("Enter another Adjective")
-output9=("Enter another Adjective")
-output10=("Enter a type ofFood")
-output11=("Enter a Plural Noun")
-output1= StringVar()
-output2= StringVar()
-output3= StringVar()
-output4= StringVar()
-output5= StringVar()
-output6= StringVar()
-output7= StringVar()
-output8= StringVar()
-output9= StringVar()
-output10= StringVar()
-output11= StringVar()
+a1=Entry(win,text="Enter a Holiday",width=40)
+a2=Entry(win,text="Enter a Noun",width=40)
+a3=Entry(win,text="Enter an Place",width=40)
+a4=Entry(win,text="Enter a Person",width=40) 
+a5=Entry(win,text="Enter a Adjective",width=40)
+a6=Entry(win,text="Enter a Body Part",width=40)
+a7=Entry(win,text="Enter a Verb",width=40)
+a8=Entry(win,text="Enter another Adjective",width=40)
+a9=Entry(win,text="Enter another Adjective",width=40)
+a10=Entry(win,text="Enter a type of Food",width=40)
+a11=Entry(win,text="Enter a Plural Noun",width=40)
+b1=Button(win,text="Finalise Madlib",command=madlib)
+f1=Entry(win,textvariable=eoutput,width=40)
 
-
-l1=Label(win,text="I can't believe its already")
-a1=Entry(win,text="Enter a Holiday")
-b1=Button(win,command=madlib)
-
-l1.pack()
 a1.pack()
+a2.pack()
+a3.pack()
+a4.pack()
+a5.pack()
+a6.pack()
+a7.pack()
+a8.pack()
+a9.pack()
+a10.pack()
+a11.pack()
 b1.pack()
+f1.pack()
 win.mainloop()
