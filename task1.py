@@ -24,7 +24,8 @@ def madlib():
     Adjective3=a9.get
     Food=a10.get
     Plural=a11.get
-    
+    story ="I cant believe its already"+ Holiday + "!I can't wait to put on my"+Noun+"and visit every"+Place+"in my neighbourhood.This year I am going to dress up as"+ Person+" with" + Adjective+Body+". Before I "+ Verb+"I make sure to grab my"+Adjective+Noun+"to hold all of my"+Food+"Finally all of my"+Plural+"are ready to go"
+
 output1=("Enter a Holiday")
 output2=("Enter a Noun")
 output3=("Enter an Place")
