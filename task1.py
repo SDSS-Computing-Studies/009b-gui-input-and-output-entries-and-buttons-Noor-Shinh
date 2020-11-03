@@ -9,7 +9,10 @@ you might use in your assignment
 import tkinter as tk 
 from tkinter import *
 win=tk.Tk()
+<<<<<<< HEAD
 win.title("Madlib Generator")
+=======
+>>>>>>> 8086d1efe53463b2d41ba1728e1d9062c65283c0
 eoutput=StringVar()
 
 
@@ -25,10 +28,18 @@ def madlib():
     Noun2=a9.get()
     Food=a10.get()
     Plural=a11.get()
+<<<<<<< HEAD
     
     story ="I can't believe its already "+ Holiday + "!\nI can't wait to put on my "+Noun+" and visit every "+Place+" in my neighbourhood.\nThis year I am going to dress up as "+ Person+" with " + Adjective+" "+Body+".\n Before I "+ Verb+" I make sure to grab my "+Adjective2+" "+Noun2+" to hold all of my "+Food+"\nFinally all of my "+Plural+" are ready to go"
     eoutput.set(story)
     
+=======
+    
+    story ="I can't believe its already "+ Holiday + "!\nI can't wait to put on my "+Noun+" and visit every "+Place+" in my neighbourhood.\nThis year I am going to dress up as "+ Person+" with " + Adjective+" "+Body+".\n Before I "+ Verb+" I make sure to grab my "+Adjective2+" "+Noun2+" to hold all of my "+Food+"\nFinally all of my "+Plural+" are ready to go"
+    eoutput.set(story)
+    f1entry.delete(0,END)
+    f1entry.insert(0,story)
+>>>>>>> 8086d1efe53463b2d41ba1728e1d9062c65283c0
 l1=Label(win,text="Enter a Holiday",)
 a1=Entry(win,width=80)
 l2=Label(win,text="Enter a Noun")
@@ -81,4 +92,8 @@ f1.grid(row=13,column=1,columnspan=5)
 
 
 
+<<<<<<< HEAD
 win.mainloop()
+=======
+win.mainloop()
+>>>>>>> 8086d1efe53463b2d41ba1728e1d9062c65283c0
