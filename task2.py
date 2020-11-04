@@ -13,14 +13,17 @@ Extension: make the + between a,b and b,c buttons that will toggle
 between + and -.
 """
 
-import tkinter as tk 
+import tkinter as tk
 from tkinter import *
-import math 
+import math
+
 win=tk.Tk()
 win.title("Factoring Simple Trinomials")
 eoutput=StringVar()
 variable1=StringVar()
 variable2=StringVar()
+factor1=StringVar()
+factor2=StringVar()
 
 def factor():
     a=1
@@ -32,34 +35,27 @@ def factor():
     e=variable2.get()
     if d=="+":
         b=b*1
-    elif x1=="-":
+    elif d=="-":
         b=b*-1
     if e=="+":
         c=c*1
-    elif x2=="-":
+    elif e=="-":
         c=c*-1
-    stepx1=(b*-1)
-    stepx2=math.pow(b,2)-(4*a*c)
-    stepx2=math.pow(stepx2,0.5)
-    stepx3=(stepx1)+(stepx2) 
-    stepx4=(stepx3)/(2*a)
-    stepy1=(b*-1)
-    stepy2=math.pow(b,2)-(4*a*c)
-    stepy2=math.pow(stepy2,0.5)
-    stepy3=(stepy1)-(stepy2) 
-    stepy4=(stepy3)/(2*a)
-    stepx4=round(stepx4,2)
-    stepy4=round(stepy4,2)
-    if stepx4>0:
-        stepx5=("x"+str(stepx4*-1))
-    elif stepx4<0:
-        stepx5=("x+"+str(stepx4*-1))
-    if stepy4>0:
-        stepy5=("x"+str(stepy4*-1))
-    elif stepy4<0:
-        stepy5=("x+"+str(stepy4*-1))
-    numlist=[stepy5,stepx5]
-    eoutput.set(numlist)
+    x=(((b*-1) + math.sqrt(b**2 -(4 *c)))/2)
+    y=(((b*-1) - math.sqrt(b**2 -(4 * c)))/2)
+    if x<0:
+        factor1.set("(x + "+str(abs(x))+')')
+    if y<0:
+        factor2.set('(x + '+str(abs(y))+')')
+    if x==0:
+        factor1.set('(0)')
+    if y==0:
+        factor2.set('(0)')
+    if x>0:
+        factor1.set('(x - '+str(abs(x))+')')
+    if y>0:
+        factor2.set('(x - '+str(abs(y))+')')
+    eoutput.set(str(factor1.get())+str(factor2.get()))
 
 l1=Label(win,text="bx value")
 l2=Label(win,text="c value")
